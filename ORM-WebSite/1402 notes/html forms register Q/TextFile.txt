@@ -1,0 +1,11 @@
+﻿AddAnsrRdoBtnLstTxt
+AddAnsrDrpDnLstTxt
+AddAnsrChckBxLstTxt
+	#warning TXT
+            var TXTID = "TB" + que.Question_ID + "_" + que.Question_Index;
+            var TXT = frmInpt.FindControl(TXTID) as TextBox;
+            if (TXT.Text.Trim().Length == 0)
+            { if (!que.Question_Optional) return false; }
+            ansr.Text_Field = TXT.Text;
+            frmInstnc.Add_Answer(ansr);
+            return true;

@@ -885,14 +885,14 @@ namespace ORM
             return true;
         }
 
-        bool AddAnsrTxt(Question Current_Question, Panel input_form, Form_Question_Instance newanswer, Form_Instance frmInstnc)
+        bool AddAnsrTxt(Question que, Panel frmInpt, Form_Question_Instance ansr, Form_Instance frmInstnc)
         {
-            var TextBoxID = "TB" + Current_Question.Question_ID + "_" + Current_Question.Question_Index;
-            var result3 = input_form.FindControl(TextBoxID) as TextBox;
-            if (result3.Text.Trim().Length == 0)
-            { if (!Current_Question.Question_Optional) return false; }
-            newanswer.Text_Field = result3.Text;
-            frmInstnc.Add_Answer(newanswer);
+            var TXTID = "TB" + que.Question_ID + "_" + que.Question_Index;
+            var TXT = frmInpt.FindControl(TXTID) as TextBox;
+            if (TXT.Text.Trim().Length == 0)
+            { if (!que.Question_Optional) return false; }
+            ansr.Text_Field = TXT.Text;
+            frmInstnc.Add_Answer(ansr);
             return true;
         }
 
@@ -932,49 +932,68 @@ namespace ORM
         }
 
 
-        bool AddAnsrRdoBtnLstTxt(Question Current_Question,
-            Panel input_form,
-            Form_Question_Instance newanswer,
-            ORM.Form_Instance newinstance)
+        bool AddAnsrRdoBtnLstTxt(Question que,
+            Panel frmInpt,
+            Form_Question_Instance ansr,
+            ORM.Form_Instance frmInstnc)
         {
-#warning test
-            String RadioButtonID = "RBL" + Current_Question.Question_ID + "_" + Current_Question.Question_Index;
-            RadioButtonList result2 = input_form.FindControl(RadioButtonID) as RadioButtonList;
-            if (result2.SelectedValue.Length == 0) { if (!Current_Question.Question_Optional) return false; }
-            SetValue(Current_Question.Template_Type, newanswer, result2.SelectedValue);
-            if (!btnValidate(newanswer.Question_ID, input_form)) return false;
-            newinstance.Add_Answer(newanswer);
+
+            var RBID = "RBL" + que.Question_ID + "_" + que.Question_Index;
+            var RB = frmInpt.FindControl(RBID) as RadioButtonList;
+            if (RB.SelectedValue.Length == 0) { if (!que.Question_Optional) return false; }
+            SetValue(que.Template_Type, ansr, RB.SelectedValue);
+            if (!btnValidate(ansr.Question_ID, frmInpt)) return false;
+            #warning AddTxt
+            var TXTID = "TB" + que.Question_ID + "_" + que.Question_Index;
+            var TXT = frmInpt.FindControl(TXTID) as TextBox;
+            if (TXT.Text.Trim().Length == 0)
+            { if (!que.Question_Optional) return false; }
+            ansr.Text_Field = TXT.Text;
+            frmInstnc.Add_Answer(ansr);
             return true;
         }
-        bool AddAnsrDrpDnLstTxt(Question Current_Question,
-            Panel input_form,
-            Form_Question_Instance newanswer,
-            ORM.Form_Instance newinstance)
+        bool AddAnsrDrpDnLstTxt(Question que,
+            Panel frmInpt,
+            Form_Question_Instance ansr,
+            ORM.Form_Instance frmInstnc)
         {
-#warning test
-            String DropDownID = "DDL" + Current_Question.Question_ID + "_" + Current_Question.Question_Index;
-            DropDownList result1 = input_form.FindControl(DropDownID) as DropDownList;
-            newanswer = SetValue(Current_Question.Template_Type, newanswer, result1.SelectedValue);
-            newinstance.Add_Answer(newanswer);
+            
+            var DropDownID = "DDL" + que.Question_ID + "_" + que.Question_Index;
+            var result1 = frmInpt.FindControl(DropDownID) as DropDownList;
+            ansr = SetValue(que.Template_Type, ansr, result1.SelectedValue);
+            #warning TXT
+            var TXTID = "TB" + que.Question_ID + "_" + que.Question_Index;
+            var TXT = frmInpt.FindControl(TXTID) as TextBox;
+            if (TXT.Text.Trim().Length == 0)
+            { if (!que.Question_Optional) return false; }
+            ansr.Text_Field = TXT.Text;
+            frmInstnc.Add_Answer(ansr);
+
             return true;
         }
 
 
-        bool AddAnsrChckBxLstTxt(Question Current_Question,
-            Panel input_form,
-            Form_Question_Instance newanswer,
-            ORM.Form_Instance newinstance)
+        bool AddAnsrChckBxLstTxt(Question que,
+            Panel frmInpt,
+            Form_Question_Instance ansr,
+            ORM.Form_Instance frmInstnc)
         {
-#warning test
-            String ComboboxID = "CBL" + Current_Question.Question_ID + "_" + Current_Question.Question_Index;
-            CheckBoxList result = input_form.FindControl(ComboboxID) as CheckBoxList;
-            foreach (ListItem item in result.Items)
+            #warning test
+            var cmbID = "CBL" + que.Question_ID + "_" + que.Question_Index;
+            var CMB = frmInpt.FindControl(cmbID) as CheckBoxList;
+            foreach (ListItem item in CMB.Items)
                 if (item.Selected)
                 {
-                    if (!btnValidate(newanswer.Question_ID, input_form)) return false;
-                    newanswer = SetValue(Current_Question.Template_Type, newanswer, item.Value);
+                    if (!btnValidate(ansr.Question_ID, frmInpt)) return false;
+                    ansr = SetValue(que.Template_Type, ansr, item.Value);
                 }
-            newinstance.Add_Answer(newanswer);
+            #warning TXT
+            var TXTID = "TB" + que.Question_ID + "_" + que.Question_Index;
+            var TXT = frmInpt.FindControl(TXTID) as TextBox;
+            if (TXT.Text.Trim().Length == 0)
+            { if (!que.Question_Optional) return false; }
+            ansr.Text_Field = TXT.Text;
+            frmInstnc.Add_Answer(ansr);
             return true;
         }
         #endregion
