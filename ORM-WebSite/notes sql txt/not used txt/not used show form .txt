@@ -1,0 +1,8 @@
+fields
+	bool refresh
+	String tblid
+	String gridString
+
+func
+	GetLiteral()
+	ApplyOptionTitles()

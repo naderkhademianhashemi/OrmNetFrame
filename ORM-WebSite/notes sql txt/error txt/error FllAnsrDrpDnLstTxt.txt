@@ -1,0 +1,12 @@
+FllAnsrDrpDnLstTxt
+    Index was out of range. 
+    Must be non-negative and less than the size of the collection.
+    Parameter name: index
+	
+    var tmpSlctd = (ArrayList)instance.return_value(
+                Current_Question.Question_ID, Current_Question.Template_Type,
+                Current_Question.Question_Type);
+    if (tmpSlctd != null)
+               drlist.Items.FindByValue(tmpSlctd[0].ToString()).Selected = true;
+            
+

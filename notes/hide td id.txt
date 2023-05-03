@@ -1,0 +1,7 @@
+ItemStyle-CssClass="Hide" HeaderStyle-CssClass="Hide"
+
+<style>
+        .Hide  {
+            display:none;
+        }
+    </style>

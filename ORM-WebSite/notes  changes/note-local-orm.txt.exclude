@@ -1,0 +1,78 @@
+﻿V_Que_Relation
+V_Questions
+
+ web config
+	<defaultDocument>
+		  <files>
+			  <add value="admin/homepage.aspx" />
+		  ...
+	
+	  <connectionStrings>
+		<add name="ORM_ConnectionString"
+		  connectionString="Data Source=.; 
+		  Initial Catalog=FG_DB;user id=sa; password =1234" 
+		  providerName="System.Data.SqlClient" />
+		  ...
+
+تخصیص گزینه
+editoption
+	SetMessages 
+	SetError
+Admin/editoption.aspx?qid=119
+	asp:MultiView
+		GridView_options
+			btnAdd
+				INSERT INTO [List_Items]
+				Invalid column name 'Table_Id'.
+MasterPage
+	<ul>
+        <li><a href="/Admin/FormView.aspx">FormView</a></li>
+    </ul>
+
+[USP_Get_dt_QueListItems].sql
+ 
+Question.cs
+	V_Question created 
+	Get_DT_Questions()
+		invalid object V_Question 
+
+مدیریت سوالات
+NewQuestion.aspx.cs
+	Page_Load()
+	RadioButtonListDataBind()
+	RadioButtonListDataBindByRSRC()
+
+ویرایش سوال
+Admin/NewQuestion.aspx?FID=65
+
+
+پاسخ به فرم پرسشنامه
+Admin/ViewQuestion.aspx?FID=65
+HTML_Forms.cs
+	public Panel Get_Html()
+		remove ORM.List.get_dt_items() in List.cs	
+
+List_FG_DB_DataSet
+	Get_dt_QueListItems(string Qid)
+	USP_Get_dt_QueListItems 
+		@Qid bigint
+	USP_Save_List_Items
+
+Glabal.asax
+	باید ترای کچ رو برداریم تا کد توی گلوبال اجرا بشه
+	void Application_Error(object sender, EventArgs e)
+		{
+        var ex = Server.GetLastError();
+        Logger.Info("test", "test");
+
+		}
+SQL_Connector.cs
+	...
+	Catch (Exception er)
+        {
+			StackTrace _stackTrace = new StackTrace();
+            Alert.Show_Alert_Window("-caller-" + _stackTrace.GetFrame(1).GetMethod().Name);
+            Logger.Error(er);
+			....
+
+		

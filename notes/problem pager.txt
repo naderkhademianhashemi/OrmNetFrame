@@ -1,0 +1,4 @@
+Paging in GridView not show up
+	remove Grid event 
+		..._RowCreated
+

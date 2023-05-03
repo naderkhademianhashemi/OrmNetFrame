@@ -1,0 +1,12 @@
+﻿GridView_Form_Instance_PageIndexChanging
+
+GridView_Form_Instance_RowDeleting
+GridView_Form_Instance_DataBound
+
+GridView_Form_Instance_RowCommand
+        var instanceform = new ORM.Forms(tblname.SelectedValue);
+            var form = new ORM.HTML_Forms(instanceform, this);
+            panelHtmlForms.Controls.Clear();
+            panelHtmlForms.Controls.Add(form.Fill_Panel(SlctdRw, cdMhlKdmt));
+            panelHtmlForms.Enabled = false;
+            panelHtmlForms.Visible = true;

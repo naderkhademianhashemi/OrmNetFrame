@@ -1,0 +1,7 @@
+        private Boolean _question_active = true;
+
+        remove update_relation()
+                _relation_condition
+                _question_pre
+                insert_relation()
+                update()

@@ -1,0 +1,5 @@
+               
+Unable to cast object of type 
+'System.Collections.ArrayList' to type 'System.String'.
+            txt.Text = (String)frmInstnc.return_value(Current_Question.Question_ID,
+             Current_Question.Template_Type, Current_Question.Question_Type);

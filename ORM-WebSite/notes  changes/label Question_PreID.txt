@@ -1,0 +1,7 @@
+var q = new Question(Current_Question.Question_ID);
+            Label lbl = new Label()
+            {
+                Text = q.Question_PreID.ToString() + " "
+                + q.Question_ID.ToString()
+            };
+            output_panel.Controls.Add(lbl);

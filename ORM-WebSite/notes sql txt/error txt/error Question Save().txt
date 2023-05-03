@@ -1,0 +1,6 @@
+Question
+	Save()
+		if (dt != null && dt.Rows.Count > 0)//'Object reference not set to an instance of an object.'
+                return dt.Rows[0][0].ToString();
+        else
+                return "";

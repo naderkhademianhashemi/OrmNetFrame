@@ -1,0 +1,18 @@
+﻿V_Que
+	Question_ID - QID
+	Question_Index - QueNum
+	Description - Que
+	Question_Optional - Status
+	Question_Type - Type
+	Form_ID
+	Template_Type
+	Que_Type_Description
+	QueIsActive
+
+		GetselectIndex()
+		IsQueActiv()
+		GridView_Form_Questions_RowUpdating()
+		btnAddQue_Click()
+		databind()
+		Save()
+   

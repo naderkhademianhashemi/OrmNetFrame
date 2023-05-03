@@ -1,0 +1,66 @@
+class ShowForm
+	tblname_DataBound
+
+class ManageUser
+	GetDestUrl
+
+class newQuestion
+	GetStatus
+
+EditOption.cs fillformerEditOption.cs
+	GetStatus
+
+viewQuestion 
+	Page_Load
+
+edit_answers
+	Page_Load
+
+fillformerShowForm
+	ID_download_Click
+	btnXmlBetweenDates_Click
+
+ViewQuestion
+	Button1_Click1
+
+Alert
+	
+html_forms
+	btnValidate
+	btnValidatetext
+
+OrmUtility
+	SetMessages
+
+sql_connector
+	Select
+
+editForm
+	UpdatePanel1
+
+editOption,fillformerEditOption
+	FooterTemplate 2 times
+	txtAddItemnum
+
+manageUser
+	asp:TemplateField HeaderText="ویرایش"
+	asp:TemplateField HeaderText="حذف"
+
+newQuestion,fillformerNewQ
+	<%--gggggggggggggggggggg--%>
+
+showForm,fillformerShowForm
+	delete 3 commented ImageButton
+		ImageButton2
+		ID_
+		ID_download
+	btnXlsSave()
+	Current_Question.Question_ID
+	Check_Click()
+	checkAll()
+	checkAll_Form_Instance()
+	MouseEvents()
+	Label11
+
+Forms
+	GridView_Forms

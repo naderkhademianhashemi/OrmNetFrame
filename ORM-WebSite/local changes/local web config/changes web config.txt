@@ -1,0 +1,11 @@
+<connectionStrings>
+       <add name="ORM_ConnectionString"
+         connectionString="Data Source=.; Initial Catalog=FG_DB;user id=sa; password =1234" providerName="System.Data.SqlClient" />
+
+</connectionStrings>
+
+<defaultDocument>
+		  <files>
+			  <add value="admin/homepage.aspx" />
+		  </files>
+	  </defaultDocument>

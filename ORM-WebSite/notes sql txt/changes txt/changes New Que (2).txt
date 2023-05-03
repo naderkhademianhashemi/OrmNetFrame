@@ -1,0 +1,14 @@
+سئوال مرتبط
+QueNum1
+
+شرط مرتبط
+Condition
+
+<asp:CheckBox ID="chk_question_disabled" runat="server"
+                    Text="سئوال غیر فعال"/>
+
+remove 
+    chk_question_related
+    chk_question_related_CheckedChanged
+    drd_Question_SelectedIndexChanged
+

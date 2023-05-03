@@ -1,0 +1,19 @@
+@ECHO OFF
+
+del /s *.jpg 
+del /s *.png
+del /s *.gif
+del /s *.js
+del /s *.svg
+del /s *.eps
+del /s *.css
+del /s *.html
+del /s *.psd
+del /s *.md
+del /s *.map
+del /s *.dll
+del /s *.nupkg
+::del /s *.xml
+del /s *.targets
+del /s *.exe
+

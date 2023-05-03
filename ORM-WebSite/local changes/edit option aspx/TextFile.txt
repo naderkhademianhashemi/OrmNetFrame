@@ -1,0 +1,8 @@
+﻿<asp:Button ID="Button1" runat="server" Text="تخصيص همه استان ها"
+        OnClick="Button1_Click" Visible="False" />
+    <asp:Button ID="Button2" runat="server" Text="تخصيص همه شعبه ها"
+        OnClick="Button2_Click" Visible="False" />
+    <asp:Button ID="Button4" runat="server" Text="تخصيص همه شعبه ها"
+        OnClick="Button4_Click" Visible="False" />
+    <asp:Button ID="Button3" runat="server" Text="تنظيم دستي گزينه ها "
+        OnClick="Button3_Click" Visible="False" />

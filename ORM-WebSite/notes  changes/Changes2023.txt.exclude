@@ -1,0 +1,67 @@
+پاسخ به فرم پرسشنامه
+Admin/ViewQuestion.aspx?FID=65
+HTML_Forms.cs
+		Panel Get_Html()
+			remove definition for rdoList ...
+			AddLblStar()
+			AddLblQuestionDes()
+			AddTxtBx()
+			...
+		bool register_form(,,)
+		delete register_form 2 param
+			AddAnsrChckBxLstTxt()
+			...
+				add comment 
+				//if (!btnValidate(newanswer.Question_ID, input_form)) return false; 
+		
+		update_form(,,)
+			UpdtAnsrChckBxLstTxt()
+			...
+
+مشاهده پاسخ ها
+Admin/ShowForm.aspx?Fid=65
+HTML_Forms.cs
+	delete Fill_PanelWithCodeMahalKhedmat(,)
+		Panel Fill_Panel(...)
+			FllAnsrRdoBtnLstTxt()
+			...
+
+FillFormerEditOption
+	page_Load() condition if
+	          
+ORM_Types.cs
+	enum Question_Type
+	int Get_Question_Type(Question_Type qtype)
+	Question_Type Get_Question_Type(int qtype)
+	get_Col_Name(String Qid)
+
+مدیریت سوالات
+ویرایش سوال
+Admin/NewQuestion.aspx?FID=65	
+	add 3 radio
+		asp RadioButtonList rblTypeQue
+	GetType()
+	linkIsEnable()
+	cmb_relCondition added
+	btnAddQue_Click
+	V_Questions
+
+Question.cs
+	public Question(,)
+	public Question()
+		if (this.Question_Type == ...)
+			ChckBxLstAndTxt
+			...
+	
+تخصیص گزینه
+Admin/editoption.aspx?qid=124
+	btnAdd GridView_options
+	Page_Load	
+		Alert
+
+
+
+
+
+
+	

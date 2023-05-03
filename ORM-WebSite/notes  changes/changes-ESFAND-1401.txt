@@ -1,0 +1,21 @@
+1.FG_DB
+	Tbl Question_Type
+		Edit top Rows
+	View_Instance_Branch_Answers
+		[CodeMahalKhedmat]
+2.Alert
+	Find Catch entire sln
+	Replace Alert.Consolelog(msg) 
+			Alert.Show()
+3.ORM_Types.cs
+
+4.HTML_Forms.cs
+
+5.NewQuestion مدیریت سوالات
+
+6.FillFormerNewQuestion	طراحی سوال
+
+	پاسخ به فرم پرسشنامه
+Admin/ViewQuestion.aspx?FID=65
+HTML_Forms.cs
+

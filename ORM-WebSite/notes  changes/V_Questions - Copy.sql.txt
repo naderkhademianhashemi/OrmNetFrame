@@ -1,0 +1,30 @@
+USE [FG_DB]
+GO
+/****** Object:  View [dbo].[V_Questions]    Script Date: 2/16/2023 3:42:09 PM ******/
+SET ANSI_NULLS ON
+GO
+SET QUOTED_IDENTIFIER ON
+GO
+CREATE VIEW [dbo].[V_Questions]
+AS
+SELECT Question_Relation.Question1 AS QRelationID,
+ Question_Relation.Question2, 
+ Questions.Question_ID AS QID,
+  Questions.Description, 
+  Questions.Form_ID,
+   Question_Relation.Condition,
+     Questions.Question_Type, 
+	 Questions.Question_Type As type,
+                  Questions.Template_Type,
+				   Questions.Question_Optional,
+				    Questions.Question_Index
+				  ,Questions.Question_ID As QueNum,
+	 Questions.Description As Que,
+	 Questions.Question_Optional as Status,
+	 Question_Relation.Question2 as Que1,
+	 Question_Relation.Question2 as QID1,
+	Question_Relation.Question2 as QueNum1
+FROM     Question_Relation right outer JOIN
+                  Questions ON Question_Relation.Question1 = Questions.Question_ID
+GO
+

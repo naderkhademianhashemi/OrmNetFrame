@@ -1,0 +1,13 @@
+Professional ASP.NET 4.5 in C# and VB	
+	D:\zip 2023\SourceCode + ebook
+	Building Global Applications
+		chapter 32
+
+LISTING 32-16: Programmatically referencing a resource
+
+	<script runat="server">
+ 	protected void Button1_Click(object sender, System.EventArgs e)
+ 	{
+ 	Label2.Text = GetLocalResourceObject("Label2Answer").ToString();
+ 	}
+	</script>

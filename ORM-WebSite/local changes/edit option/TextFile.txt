@@ -1,0 +1,5 @@
+﻿ if (localQue.List.List_Items.Count > 0)
+            {
+                GridView_options.Visible = true;
+                Panel2.Visible = false;
+            }

@@ -1,0 +1,3 @@
+﻿<span>GridView2</span>
+        <asp:GridView ID="GridView2" runat="server">
+        </asp:GridView>

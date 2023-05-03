@@ -1,0 +1,29 @@
+مشاهده پاسخ ها
+Admin/ShowForm
+HTML_Forms.cs
+	date,Num not shown in ShowForm.aspx
+    1.FllAnsrDate
+	        if (instance.return_value(Current_Question.Question_ID,
+                Current_Question.Template_Type, Current_Question.Question_Type) != "")
+            {
+                DateTime datetime = Convert.ToDateTime(instance.return_value(Current_Question.Question_ID,
+                    Current_Question.Template_Type, Current_Question.Question_Type));
+
+                pdt.DateValue = datetime;
+            }
+
+   2. FllAnsrNum
+           txt1.Text = (String)instance.return_value(Current_Question.Question_ID,
+                Current_Question.Template_Type, Current_Question.Question_Type);
+    
+	3.comment in FllAnsrRdoBtnLst
+			if (temp != null && rblist.Items.FindByValue(temp[0].ToString()) != null)
+                rblist.Items.FindByValue(temp[0].ToString()).Selected = true;
+         
+	4.comment in FllAnsrDrpDnLst
+			if (temp != null)
+                drlist.Items.FindByValue(temp[0].ToString()).Selected = true;
+	5.comment in FllAnrTxt
+		txt.Text = (String)instance.return_value(Current_Question.Question_ID,
+        Current_Question.Template_Type, Current_Question.Question_Type);
+	

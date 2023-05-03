@@ -1,0 +1,20 @@
+
+public Question(String questionid)
+	...
+	String sql_query = "select * from V_Questions where QID = " + questionid;
+	...
+	foreach (DataRow dr in dt.Rows)
+		....
+	if (dr["Question2"] != DBNull.Value)
+                    this._question_pre = int.Parse(dr["Question2"].ToString());
+
+public Question(String questionid, String formid)
+		String sql_query = @"select *
+            from V_Questions where Form_ID = " + formid + "AND QID = " + questionid;
+
+		foreach (DataRow dr in dt.Rows)
+		....
+	if (dr["Question2"] != DBNull.Value)
+                    this._question_pre = int.Parse(dr["Question2"].ToString());
+
+

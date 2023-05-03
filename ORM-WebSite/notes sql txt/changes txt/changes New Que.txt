@@ -1,0 +1,10 @@
+<asp:TemplateField HeaderText="" SortExpression=""
+                            ControlStyle-BorderStyle="None" ShowHeader="False">
+                            <ItemTemplate>
+                                <asp:HiddenField ID="txt_questionrel_ID" runat="server" Value='<%# Bind("QRelationID") %>' />
+                            </ItemTemplate>
+                            <ControlStyle BorderStyle="None"></ControlStyle>
+                            <HeaderStyle BackColor="Silver" BorderStyle="None" />
+                            <ItemStyle BackColor="Silver" BorderStyle="None"  />
+                        </asp:TemplateField>
+

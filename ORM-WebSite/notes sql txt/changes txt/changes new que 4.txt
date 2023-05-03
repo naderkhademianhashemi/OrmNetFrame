@@ -1,0 +1,6 @@
+﻿<asp:TemplateField سئوال فعال
+                            lblQueIsActive
+
+                            <EditItemTemplate>
+                               drpQueIsActive
+                         

@@ -1,0 +1,14 @@
+foreach
+                var qu = new Question(Current_Question.Question_ID);
+                if (qu.Question_PreID != 0)
+                    continue;
+
+                var lbl1 = new Label();
+                lbl1.Attributes["class"] = "lbl";
+                lbl1.Text = "A";
+                lbl1.Attributes["style"] = "display:none";
+                output_panel.Controls.Add(lbl1);
+
+drlist.Attributes["onchange"] = "javascript:MakeVisible(this);";
+
+ 

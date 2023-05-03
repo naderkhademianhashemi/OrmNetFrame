@@ -1,0 +1,20 @@
+To generate a local resource file from an ASP.NET Web page: 
+
+	1.Open the page for which you want to create a resource file.
+	
+	2.Switch to Design View.
+	
+	3.In the Tools menu, click Generate Local Resource. 
+		Visual Web Developer creates the App_LocalResources folder if it does not already exist. 
+		Visual Web Developer then creates the culturally neutral base resource file for the current page, 
+		which includes a key/name pair for each control property or page property that requires localization. 
+		Finally, Visual Web Developer adds a meta attribute to each ASP.NET Web server control to configure the control to use implicit localization 
+			
+	
+	4.Type values for each resource that you need in your application, and then save the file.
+	
+	5.If the latest resource changes are not displayed, 
+		refresh Design view by switching to Source view and then switching back to Design view.
+		
+	
+		

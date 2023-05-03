@@ -1,0 +1,11 @@
+﻿ List_Items(String Itemid)
+            "select [Item_ID],[Item_Text],[List_ID] 
+            from [List_Items] where Item_ID=" + Itemid;
+            remove col Optional...
+
+        Add()
+          
+            "INSERT INTO [List_Items] " +
+                "([Item_Text],[List_ID]) VALUES(N'" +
+                Item_Text + "' , " + List_ID+")";
+            remove col Optional...

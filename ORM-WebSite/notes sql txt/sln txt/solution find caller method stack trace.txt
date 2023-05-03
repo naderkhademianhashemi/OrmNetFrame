@@ -1,0 +1,2 @@
+StackTrace _stackTrace = new StackTrace();
+var caller=_stackTrace.GetFrame(1).GetMethod().Name
